@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+.venv/
+venv/
+.env
+.env.*
+dist/
+build/
+
+# macOS
+.DS_Store
+
+# IDEs/editors
+.vscode/
+.idea/
+
+# Logs & temp
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Audio artifacts
+reply.wav
+reply.mp3
+
+# Local data/cache
+.cache/
