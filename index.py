@@ -17,10 +17,9 @@ from assemblyai.streaming.v3 import (
 from groq import Groq
 
 from dotenv import load_dotenv
-load_dotenv()  # This reads .env in current directory
+load_dotenv()  
 
 
-# -------- KEYS (hardcoded as requested — don't do this in prod) --------
 AAI_API_KEY = os.getenv("AAI_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 EL_API_KEY   = os.getenv("EL_API_KEY")
@@ -32,7 +31,6 @@ logger = logging.getLogger("conv-ai")
 groq_client = Groq(api_key=GROQ_API_KEY)
 tts_client  = ElevenLabs(api_key=EL_API_KEY)
 
-# -------- TTS utils --------
 def pcm_to_wav(pcm_bytes: bytes, wav_path: str, sr: int = 16000, ch: int = 1):
     with wave.open(wav_path, "wb") as wf:
         wf.setnchannels(ch)
